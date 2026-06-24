@@ -1,0 +1,19 @@
+{
+  // Use a Microsoft-hosted image that comes with Rust pre-installed.
+  // This saves the container from downloading and compiling Rust from scratch.
+  "image": "mcr.microsoft.com/devcontainers/rust:1-1.90",
+  
+  // Add Docker-in-Docker if you need to build containers inside the dev container.
+  // Useful for testing CI pipelines or deploying microservices.
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  
+  // Configure VS Code extensions to load automatically.
+  // rust-analyzer is the standard LSP for Rust; it provides autocomplete and error checking.
+  "customizations": {
+    "vscode": {
+      "extensions": ["rust-lang.rust-analyzer"]
+    }
+  }
+}
